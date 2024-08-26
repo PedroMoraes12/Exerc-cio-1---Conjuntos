@@ -58,5 +58,5 @@ def processar_operacoes(arquivo_entrada):
         print(f"{operacao_extenso}: conjunto 1 {conjunto1}, conjunto 2 {conjunto2}. Resultado: {resultado}")
 
         index += 3
-
+# ALTERAR O NOME PARA TESTAR OS OUTROS ARQUIVOS
 processar_operacoes('entrada1.txt')
