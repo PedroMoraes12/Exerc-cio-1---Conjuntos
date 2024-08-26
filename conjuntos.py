@@ -25,7 +25,7 @@
 #3, 4, 5, 5, A, B, R
 #1, B, C, D, 1
 
-def processar_operacoes(arquivo_entrada):
+def main(arquivo_entrada):
     with open(arquivo_entrada, 'r') as file:
         linhas = file.readlines()
 
@@ -41,22 +41,22 @@ def processar_operacoes(arquivo_entrada):
 
         if operacao == 'U':
             resultado = conjunto1.union(conjunto2)
-            operacao_extenso = "União"
+            extenso = "UNIÃO"
         elif operacao == 'I':
             resultado = conjunto1.intersection(conjunto2)
-            operacao_extenso = "Interseção"
+            extenso = "INTERSEÇÃO"
         elif operacao == 'D':
             resultado = conjunto1.difference(conjunto2)
-            operacao_extenso = "Diferença"
+            extenso = "DIFERENÇA"
         elif operacao == 'C':
             resultado = {(x, y) for x in conjunto1 for y in conjunto2}
-            operacao_extenso = "Produto Cartesiano"
+            extenso = "PRODUTO CARTESIANO"
         else:
-            resultado = "Operação desconhecida"
-            operacao_extenso = "Erro"
+            resultado = "OPERAÇÃO DESCONHECIDA"
+            extenso = "ERRO"
 
-        print(f"{operacao_extenso}: conjunto 1 {conjunto1}, conjunto 2 {conjunto2}. Resultado: {resultado}")
+        print(f"{extenso}: conjunto 1 {conjunto1}, conjunto 2 {conjunto2}. Resultado: {resultado}")
 
         index += 3
 # ALTERAR O NOME PARA TESTAR OS OUTROS ARQUIVOS
-processar_operacoes('entrada1.txt')
+main('entrada3.txt')
