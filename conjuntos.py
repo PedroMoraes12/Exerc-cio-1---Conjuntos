@@ -59,4 +59,4 @@ def main(arquivo_entrada):
 
         index += 3
 # ALTERAR O NOME PARA TESTAR OS OUTROS ARQUIVOS
-main('entrada3.txt')
+main('entrada1.txt')
